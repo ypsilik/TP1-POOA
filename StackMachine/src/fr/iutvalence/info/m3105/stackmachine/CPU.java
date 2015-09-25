@@ -4,7 +4,9 @@ import java.io.IOException;
 
 public class CPU
 {
-
+	
+	public Instruction instruction;
+	public IO ioSystem ;
 	public final static int HALT 	= 0x00;
 	public final static int PUSH  	= 0x01;
 	public final static int ADD 	= 0x02;
@@ -37,7 +39,7 @@ public class CPU
 			while (true)
 			{
 				// TODO something is missing here...
-
+				int opCode =  instruction.getOpCode();
 				// System.err.print("@" + this.programCounter + ": ");
 				switch (opCode)
 				{
@@ -176,6 +178,42 @@ public class CPU
 		{
 			// TODO something is missing here...
 		}		
+	}
+
+	public void wireToProgramMemory(Memory programMemory)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void wireToExpStack(Stack expStack)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void wireToCallStack(Stack callStack)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void wireToIoSubsystem(IO ioSystem)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void clearStacks()
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setPC(int address)
+	{
+		// TODO Auto-generated method stub
+		
 	}
 
 	// TODO something is missing here...
