@@ -2,10 +2,9 @@ package fr.iutvalence.info.m3105.stackmachine;
 
 import java.io.IOException;
 
-public abstract class CPU
+public class CPU2 extends CPU
 {
-	
-	public Instruction instruction;
+/*	public Instruction instruction;
 	public IO ioSystem ;
 	public final static int HALT 	= 0x00;
 	public final static int PUSH  	= 0x01;
@@ -28,10 +27,8 @@ public abstract class CPU
 	public final static int JP		= 0x12;
 	public final static int JZ		= 0x13;
 	public final static int DUP		= 0x14;
-	public final static int POP		= 0x15;
+	public final static int POP		= 0x15;*/
 	
-	// TODO something is missing here...
-
 	public void run()
 	{
 		try
@@ -45,7 +42,7 @@ public abstract class CPU
 			}
 		}
 		 
-		catch (AddressOutOfBoundsException e)
+		/*catch (AddressOutOfBoundsException e)
 		{
 			System.out.println("Address out of bounds exception");
 		}
@@ -60,9 +57,10 @@ public abstract class CPU
 		catch (StackUnderflowException e)
 		{
 			System.out.println("Stack underflow exception");
-		}		
+		}*/		
 	}
-
+	
+	
 	private void decodeOpCode(int opCode)
 	{
 		switch (opCode)
@@ -185,41 +183,5 @@ public abstract class CPU
 			}
 		}
 	}
-
-	public void wireToProgramMemory(Memory programMemory)
-	{
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void wireToExpStack(Stack expStack)
-	{
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void wireToCallStack(Stack callStack)
-	{
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void wireToIoSubsystem(IO ioSystem)
-	{
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void clearStacks()
-	{
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void setPC(int address)
-	{
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 }

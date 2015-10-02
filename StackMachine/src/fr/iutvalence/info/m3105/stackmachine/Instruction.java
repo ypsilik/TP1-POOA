@@ -14,13 +14,11 @@ public class Instruction
 
 	public int getOpCode()
 	{
-		// TODO Auto-generated method stub
 		return this.numOpCode;
 	}
 
 	public int[] getParams()
 	{
-		// TODO Auto-generated method stub
 		return null;
 	}
 }
