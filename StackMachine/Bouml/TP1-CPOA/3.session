@@ -1,0 +1,11 @@
+window_sizes 1600 837 104 674 600 82
+diagrams
+  active  classdiagram_ref 128003 // StackMachine
+    1490 679 100 4 0 0
+end
+show_stereotypes
+selected class_ref 129667 // Memory
+open
+  classview_ref 128003 // stackmachine
+end
+end

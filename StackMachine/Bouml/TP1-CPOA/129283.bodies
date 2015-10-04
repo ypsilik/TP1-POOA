@@ -1,12 +1,5 @@
-package fr.iutvalence.info.m3105.stackmachine;
-
-public class Machine
-{
-	private CPUInterface cpu;
-	private MemoryInterface programMemory;
-
-	public Machine(CPUInterface cpu, MemoryInterface programMemory, StackInterface expStack, StackInterface callStack, IOInterface ioSystem)
-	{
+class Machine
+!!!131331.java!!!	Machine(inout cpu : CPUInterface, inout programMemory : MemoryInterface, inout expStack : StackInterface, inout callStack : StackInterface, inout ioSystem : IOInterface)
 		super();
 		this.cpu = cpu;
 		this.programMemory = programMemory;
@@ -14,10 +7,7 @@ public class Machine
 		this.cpu.wireToExpStack(expStack);
 		this.cpu.wireToCallStack(callStack);
 		this.cpu.wireToIoSubsystem(ioSystem);
-	}
-
-	public void loadProgram(Program program) throws AddressOutOfBoundsException
-	{
+!!!131459.java!!!	loadProgram(inout program : Program) : void
 		int currentAddress = this.programMemory.getStartAddress();
 
 		for (int instructionNumber = 0; instructionNumber < program.getInstructionCount(); instructionNumber++)
@@ -35,14 +25,8 @@ public class Machine
 				}
 			}
 		}
-	}
-
-	public void executeProgram(int address)
-	{
+!!!131587.java!!!	executeProgram(in address : int) : void
 		cpu.clearStacks();
 		cpu.setPC(address);
 		cpu.run();
 		System.out.println("(end of program execution)");
-	}
-
-}

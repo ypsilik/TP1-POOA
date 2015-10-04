@@ -1,6 +1,6 @@
 package fr.iutvalence.info.m3105.stackmachine;
 
-public class Memory
+public class Memory implements MemoryInterface
 {
 
 	public Memory(int i, int j) throws InvalidParametersException

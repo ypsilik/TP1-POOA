@@ -1,41 +1,5 @@
-package fr.iutvalence.info.m3105.stackmachine;
-
-import java.io.IOException;
-
-public class CPU implements CPUInterface
-{
-	public final static int HALT 	= 0x00;
-	public final static int PUSH  	= 0x01;
-	public final static int ADD 	= 0x02;
-	public final static int SUB 	= 0x03;
-	public final static int MUL 	= 0x04;
-	public final static int DIV 	= 0x05;
-	public final static int MOD 	= 0x06;
-	public final static int NEG 	= 0x07;
-	public final static int LT 		= 0x08;
-	public final static int LE 		= 0x09;
-	public final static int GT 		= 0x0A;
-	public final static int GE 		= 0x0B;
-	public final static int EQ 		= 0x0C;
-	public final static int NE 		= 0x0D;
-	public final static int IN 		= 0x0E;
-	public final static int OUT 	= 0x0F;
-	public final static int CALL 	= 0x10;
-	public final static int RET		= 0x11;
-	public final static int JP		= 0x12;
-	public final static int JZ		= 0x13;
-	public final static int DUP		= 0x14;
-	public final static int POP		= 0x15;
-	
-
-	public Instruction instruction;
-	public IO ioSystem ;
-
-
-	// TODO something is missing here...
-
-	public void run()
-	{
+class CPU
+!!!128899.java!!!	run() : void
 		try
 		{
 			while (true)
@@ -181,55 +145,21 @@ public class CPU implements CPUInterface
 		{
 			System.out.println("Stack underflow exception");
 		}		
-	}
-
-
-
-	public void clearStacks()
-	{
+!!!129027.java!!!	clearStacks() : void
 		// TODO Auto-generated method stub
 		
-	}
-
-	public void setPC(int address)
-	{
+!!!129155.java!!!	setPC(in address : int) : void
 		// TODO Auto-generated method stub
 		
-	}
-
-
-
-	@Override
-	public void wireToProgramMemory(MemoryInterface programMemory) {
+!!!129283.java!!!	wireToProgramMemory(inout programMemory : MemoryInterface) : void
 		// TODO Auto-generated method stub
 		
-	}
-
-
-
-	@Override
-	public void wireToExpStack(StackInterface expStack) {
+!!!129411.java!!!	wireToExpStack(inout expStack : StackInterface) : void
 		// TODO Auto-generated method stub
 		
-	}
-
-
-
-	@Override
-	public void wireToCallStack(StackInterface callStack) {
+!!!129539.java!!!	wireToCallStack(inout callStack : StackInterface) : void
 		// TODO Auto-generated method stub
 		
-	}
-
-
-
-	@Override
-	public void wireToIoSubsystem(IOInterface ioSystem) {
+!!!129667.java!!!	wireToIoSubsystem(inout ioSystem : IOInterface) : void
 		// TODO Auto-generated method stub
 		
-	}
-
-
-
-	
-}
